@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('email_institutionnel');
             $table->string('email_personnel')->nullable();
             $table->enum("sexe", ["male", "female"]);
+            $table->timestamps();
 
             //foreign key
             $table->unsignedBigInteger('user_id');

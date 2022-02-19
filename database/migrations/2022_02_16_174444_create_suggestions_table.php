@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('content');
             $table->unsignedBigInteger('user_id');
+            $table->timestamps();
 
         });
         Schema::table('suggestions', function (Blueprint $table) {

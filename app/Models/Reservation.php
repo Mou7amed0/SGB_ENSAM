@@ -9,10 +9,15 @@ class Reservation extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+
+    protected $fillable = ['state'];
 
     public function etudiants(){
 
         return $this->belongsTo(Etudiant::class);
+    }
+    public function copy(){
+
+        return $this->belongsTo(Copy::class);
     }
 }

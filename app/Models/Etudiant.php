@@ -9,10 +9,13 @@ class Etudiant extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+
 
     public function reservations(){
 
-        return $this->hasMany(Reservation::class);
+        return $this->hasMany(Reservation::class,'user_id');
+    }
+    public function suggestion(){
+        return $this->hasMany(Suggestion::class,'user_id');
     }
 }

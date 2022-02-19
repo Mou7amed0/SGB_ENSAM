@@ -23,12 +23,13 @@ return new class extends Migration
             $table->string("email_intitutionnel");
             $table->string("email_personnel");
             $table->enum("sexe", ["male", "female"]);
+            $table->timestamps();
 
             // foreign key
             $table->unsignedBigInteger('user_id');
 
         });
-        Schema::create('responsable', function (Blueprint $table) {
+        Schema::table('responsable', function (Blueprint $table) {
         $table->foreign('user_id')->references('id')->on("users");
     });
     }
