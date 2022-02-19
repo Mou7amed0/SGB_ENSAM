@@ -17,8 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('content');
             $table->unsignedBigInteger('user_id');
+
+        });
+        Schema::table('suggestions', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on("users");
         });
+
     }
 
     /**

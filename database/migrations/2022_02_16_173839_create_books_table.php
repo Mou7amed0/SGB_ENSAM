@@ -23,6 +23,9 @@ return new class extends Migration
 
             // foreign key
             $table->unsignedBigInteger('id_categorie');
+
+        });
+        Schema::table('books', function (Blueprint $table) {
             $table->foreign('id_categorie')->references('id')->on("categories");
         });
     }

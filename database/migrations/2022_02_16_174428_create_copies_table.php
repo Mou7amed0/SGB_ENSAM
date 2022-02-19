@@ -16,10 +16,13 @@ return new class extends Migration
         Schema::create('copies', function (Blueprint $table) {
             $table->id();
             $table->enum("state", ["disponible", "reserve", "perdu"]);
-
             $table->unsignedBigInteger('book_id');
+
+        });
+        Schema::table('copies', function (Blueprint $table) {
             $table->foreign('book_id')->references('id')->on("books");
         });
+
     }
 
     /**

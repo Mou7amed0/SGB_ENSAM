@@ -19,10 +19,15 @@ return new class extends Migration
 
             // foreign keys
             $table->unsignedBigInteger('etudiant_id');
-            $table->foreign('etudiant_id')->references('id')->on("etudiants");
+
             $table->unsignedBigInteger('copy_id');
+
+        });
+        Schema::table('reservations', function (Blueprint $table) {
+            $table->foreign('etudiant_id')->references('id')->on("etudiants");
             $table->foreign('copy_id')->references('id')->on("copies");
         });
+
     }
 
     /**
