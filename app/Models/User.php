@@ -34,6 +34,10 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function suggestions(){
+        return $this->hasMany('App\Suggestion','user_id');
+    }
+
     /**
      * The attributes that should be cast.
      *

@@ -8,6 +8,7 @@ use App\Models\Book;
 use App\Models\Etudiant;
 use App\Models\Copy;
 use App\Models\Suggestion;
+use App\Models\Reservation;
 use PhpParser\Node\Expr\FuncCall;
 
 class AdminController extends Controller
@@ -93,6 +94,30 @@ class AdminController extends Controller
         $data=Book::all()->load('category');
         return view("admin.book",compact("data"));
     }
+
+    public function  reservation(){
+
+        $data=Reservation::all();
+        $data->load('copy');
+        $data->load('etudiant');
+
+        return view("admin.reservation",compact("data"));
+    }
+
+    public function validateresa($id){
+        $data = Reservation::find($id)->load('copy');
+        $data->update(['state'=>'validee']);
+        return redirect()->back();
+    }
+
+    public function terminateresa($id){
+        $data=Reservation::find($id);
+        $data->update(['state'=>'retenue']);
+        $data1=Copy::find($data['copy_id']);
+        $data1->update(['state'=>'disponible']);
+        return redirect()->back();
+    }
+
     public function suggestion(){
         $data=Suggestion::all()->load('etudiant');
         return view("admin.suggestion",compact("data"));
@@ -114,9 +139,9 @@ class AdminController extends Controller
         $books = Book::all();
         $copies = Copy::all();
         $suggestions = Suggestion::all();
+        $reservations = Reservation::all();
 
-
-        return view('admin.adminhome', compact('categories', 'etudiants', 'books', 'copies', 'suggestions'));
+        return view('admin.adminhome', compact('categories', 'etudiants', 'books', 'copies', 'suggestions', 'reservations'));
     }
 
 }

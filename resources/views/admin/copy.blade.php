@@ -25,7 +25,7 @@
                 <td>{{$data->book->title}}</td>
 
 
-                <td><a href="{{url('/deletebook',$data->id)}}">Delete</a></td>
+                <td><a class="btn btn-danger" href="{{url('/deletebook',$data->id)}}">Delete</a></td>
 
             </tr>
             @endforeach

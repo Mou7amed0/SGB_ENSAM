@@ -30,7 +30,7 @@ return new class extends Migration
 
         });
         Schema::table('books', function (Blueprint $table) {
-            $table->foreign('id_categorie')->references('id')->on("categories");
+            $table->foreign('id_categorie')->references('id')->on("categories")->onDelete('cascade');
         });
     }
 

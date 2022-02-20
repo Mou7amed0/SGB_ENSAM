@@ -15,10 +15,7 @@
 
                     <form class="forms-sample" method="post" action="{{url('./uploadcopy')}}">
                     {{ csrf_field() }}
-                      <div class="form-group">
-                        <label for="id">Id</label>
-                        <input type="text" class="form-control" name="id" id="id" placeholder="Id">
-                      </div>
+                      
                       <div class="form-group">
                           <label for="book">Book</label>
 

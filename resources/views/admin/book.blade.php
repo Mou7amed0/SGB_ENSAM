@@ -23,16 +23,16 @@
             </tr>
 
             @foreach($data as $data)
-            <tr align="center">
+            <tr>
                 <td scope="row">{{$data->id}}</td>
                 <td>{{$data->title}}</td>
                 <td>{{$data->author}}</td>
                 <td>{{$data->edition}}</td>
                 <td>{{$data->date_edition}}</td>
                 <td>{{$data->ISBN}}</td>
-                <td>{{$data->id_categorie}}</td>
+                <td>{{$data->category->label}}</td>
 
-                <td><a href="{{url('/deletebook',$data->id)}}">Delete</a></td>
+                <td><a class="btn btn-danger" href="{{url('/deletebook',$data->id)}}">Delete</a></td>
 
             </tr>
             @endforeach

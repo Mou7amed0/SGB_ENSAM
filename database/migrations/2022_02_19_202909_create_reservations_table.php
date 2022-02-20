@@ -24,8 +24,8 @@ return new class extends Migration
             $table->timestamps();
         });
         Schema::table('reservations', function (Blueprint $table) {
-            $table->foreign('etudiant_id')->references('id')->on("etudiants");
-            $table->foreign('copy_id')->references('id')->on("copies");
+            $table->foreign('etudiant_id')->references('id')->on("etudiants")->onDelete('cascade');
+            $table->foreign('copy_id')->references('id')->on("copies")->onDelete('cascade');
 
         });
 

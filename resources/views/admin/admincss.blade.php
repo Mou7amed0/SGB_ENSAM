@@ -29,7 +29,5 @@
         div{
            margin-left: auto;
            margin-right: auto;
-           margin-top: 2%;
-           
         }
     </style>

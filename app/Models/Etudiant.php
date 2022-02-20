@@ -13,9 +13,6 @@ class Etudiant extends Model
 
     public function reservations(){
 
-        return $this->hasMany(Reservation::class,'user_id');
-    }
-    public function suggestion(){
-        return $this->hasMany(Suggestion::class,'user_id');
+        return $this->hasMany(Reservation::class,'etudiant_id');
     }
 }

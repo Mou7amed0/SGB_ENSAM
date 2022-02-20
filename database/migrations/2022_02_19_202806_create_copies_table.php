@@ -21,7 +21,7 @@ return new class extends Migration
 
         });
         Schema::table('copies', function (Blueprint $table) {
-            $table->foreign('book_id')->references('id')->on("books");
+            $table->foreign('book_id')->references('id')->on("books")->onDelete('cascade');
         });
 
     }

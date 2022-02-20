@@ -22,7 +22,7 @@
                 <th>{{$data->id}}</th>
                 <th>{{$data->label}}</th>
                 <th>{{$data->description}}</th>
-                <td><a href="{{url('/deletecat',$data->id)}}">Delete</a></td>
+                <td><a class="btn btn-danger" href="{{url('/deletecat',$data->id)}}">Delete</a></td>
 
             </tr>
             @endforeach

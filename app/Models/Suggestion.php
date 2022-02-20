@@ -9,6 +9,6 @@ class Suggestion extends Model
 {
     use HasFactory;
     public function user(){
-        return $this->belongsTo(Etudiant::class);
+        return $this->belongsTo(User::class);
     }
 }

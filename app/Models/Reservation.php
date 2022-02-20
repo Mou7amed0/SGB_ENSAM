@@ -12,12 +12,11 @@ class Reservation extends Model
 
     protected $fillable = ['state'];
 
-    public function etudiants(){
+    public function etudiant(){
 
-        return $this->belongsTo(Etudiant::class);
+        return $this->belongsTo(Etudiant::class, 'etudiant_id');
     }
     public function copy(){
-
-        return $this->belongsTo(Copy::class);
+        return $this->belongsTo(Copy::class, 'copy_id');
     }
 }

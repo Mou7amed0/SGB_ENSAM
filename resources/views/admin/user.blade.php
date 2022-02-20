@@ -6,7 +6,7 @@
 <body>
 <div class="container-scroller">
     @include('admin.navbar')
-    <div style="position:relative;top:60px;right:-60px">
+    <div style="position:relative;top:30px;">
         <table  class="table table-striped table-dark">
             <tr>
                 <th style="padding:30px">Id</th>
@@ -20,7 +20,7 @@
 
             </tr>
             @foreach($data as $data)
-            <tr align="center">
+            <tr>
                 <td>{{$data->id}}</td>
                 <td>{{$data->apogee}}</td>
                 <td>{{$data->nom}}</td>

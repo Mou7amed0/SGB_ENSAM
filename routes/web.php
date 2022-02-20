@@ -27,6 +27,11 @@ Route::post('/uploadbook',[AdminController::class,"uploadbook"]);
 Route::post('/uploadcopy',[AdminController::class,"uploadcopy"]);
 Route::get('/suggestion',[AdminController::class,"suggestion"]);
 Route::get('/deletesuggestion/{id}',[AdminController::class,"deletesuggestion"]);
+
+Route::get('/reservation', [AdminController::class, "reservation"]);
+Route::get('/validateresa/{id}', [AdminController::class, "validateresa"]);
+Route::get('/terminateresa/{id}', [AdminController::class, "terminateresa"]);
+
 Route::get('/addbook',[AdminController::class,"addbook"]);
 Route::get('/addcopy',[AdminController::class,"addcopy"]);
 

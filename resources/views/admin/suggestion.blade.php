@@ -19,7 +19,7 @@
                 <td>{{$data->id}}</td>
                 <td>{{$data->content}}</td>
                 <td>{{$data->user->name}} {{$data->user->surname}}</td>
-                <td><a href="{{url('/deletesuggestion',$data->id)}}">Delete</a></td>
+                <td><a class="btn btn-danger" href="{{url('/deletesuggestion',$data->id)}}">Delete</a></td>
 
             </tr>
             @endforeach

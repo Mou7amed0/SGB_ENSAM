@@ -16,10 +16,6 @@
                     <form class="forms-sample" method="post" action="{{url('./uploadcat')}}">
                     {{ csrf_field() }}
                       <div class="form-group">
-                        <label for="exampleInputUsername1">Id</label>
-                        <input type="text" class="form-control" name="id" id="exampleInputUsername1" placeholder="Id">
-                      </div>
-                      <div class="form-group">
                         <label for="exampleInputEmail1">Label</label>
                         <input type="text" class="form-control"  name="label" id="exampleInputEmail1" placeholder="label">
                       </div>
