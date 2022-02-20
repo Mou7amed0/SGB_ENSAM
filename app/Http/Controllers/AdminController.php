@@ -64,7 +64,6 @@ class AdminController extends Controller
 
     public function showDetails($id){
         $data=Etudiant::find($id);
-
         return view("admin.userDetails", compact('data'));
     }
 

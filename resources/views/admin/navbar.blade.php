@@ -2,8 +2,7 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="admin/assets/images/logo.svg" alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="admin/assets/images/logo-mini.svg" alt="logo" /></a>
+
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -14,8 +13,8 @@
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
-                  <span>Gold Member</span>
+                  <h5 class="mb-0 font-weight-normal">ENSAM Casablanca</h5>
+                  <span>Responsable Bibliothèque</span>
                 </div>
               </div>
               <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -114,14 +113,6 @@
                 <i class="mdi mdi-format-align-justify"></i>
               </span>
               <span class="menu-title">Categories</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="{{url('/write-mail')}}">
-              <span class="menu-icon">
-                <i class="mdi"></i>
-              </span>
-              <span class="menu-title">Notify via mail</span>
             </a>
           </li>
 

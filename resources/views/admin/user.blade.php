@@ -31,7 +31,7 @@
 
                 <td>
                     <a href="{{ url('/showEtudiantDetails', $data->id) }}">Show details</a>
-                    <a href="{{ url('/send-mail', $data->email_personnel) }}">Send email</a>
+                    <a href="{{ url('/write-mail', $data->id) }}">Send email</a>
                     <a href="{{url('/deleteuser',$data->id)}}">Delete</a>
                 </td>
 

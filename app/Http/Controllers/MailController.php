@@ -3,27 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NotifMail;
+use App\Models\Etudiant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
+    public function writeMail($id){
+        $data=Etudiant::find($id);
 
-    public function sendMail(){
-        $receiver = "mohamedoutlouh@gmail.com";
-        
-        $title = "Testing emailing";
-        $body = "If you receive this, it means that it worked as you wished.";
+        return view("emails.writeEmail", compact('data'));
+    }
+
+    public function sendMail(Request $request){
 
         $details = [
-            'title' => $title,
-            'body' => $body
+            'title' => $request->title,
+            'body' => $request->body
         ];
-        Mail::to($receiver)->send(new NotifMail($details));
+        Mail::to($request->email)->send(new NotifMail($details));
         return redirect()->to('/');
     }
 
-    public function writeMail(){
-
-    }
 }

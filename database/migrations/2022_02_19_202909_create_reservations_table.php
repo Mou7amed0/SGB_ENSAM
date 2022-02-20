@@ -16,11 +16,10 @@ return new class extends Migration
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
             $table->date("date_reservation");
+            $table->enum("state", ["creee", "validee", "retenue"])->default("creee");
 
             // foreign keys
             $table->unsignedBigInteger('etudiant_id');
-
-
             $table->unsignedBigInteger('copy_id');
             $table->timestamps();
         });

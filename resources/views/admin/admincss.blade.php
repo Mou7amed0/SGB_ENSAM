@@ -18,3 +18,18 @@
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+    <style>
+        td, th{
+            font-size: 1.5em !important;
+        }
+        td, th{
+            text-align: center;
+
+        }
+        div{
+           margin-left: auto;
+           margin-right: auto;
+           margin-top: 2%;
+           
+        }
+    </style>
