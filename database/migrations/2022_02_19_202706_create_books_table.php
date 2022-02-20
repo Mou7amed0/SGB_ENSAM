@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string("ISBN");
             $table->binary('book_image');
             $table->text("description");
-        
+            $table->timestamps();
 
             // foreign key
             $table->timestamps();

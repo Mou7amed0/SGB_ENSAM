@@ -8,6 +8,8 @@ use App\Models\Book;
 use App\Models\Etudiant;
 use App\Models\Copy;
 use App\Models\Suggestion;
+use PhpParser\Node\Expr\FuncCall;
+
 class AdminController extends Controller
 {
     public function uploadcat(Request $request){
@@ -38,7 +40,7 @@ class AdminController extends Controller
        $data=new copy;
 
         $data->id=$request->id;
-        
+
         $data->book_id=$request->book;
 
         $data->save();
@@ -99,10 +101,22 @@ class AdminController extends Controller
         $data=Copy::all()->load('book');
         return view("admin.copy",compact("data"));
     }
+
     public function  deletebook($id){
         $data=Book::find($id);
         $data->delete();
         return redirect()->back();
+    }
+
+    public function dashboard(){
+        $categories = Category::all();
+        $etudiants = Etudiant::all();
+        $books = Book::all();
+        $copies = Copy::all();
+        $suggestions = Suggestion::all();
+
+
+        return view('admin.adminhome', compact('categories', 'etudiants', 'books', 'copies', 'suggestions'));
     }
 
 }

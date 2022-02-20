@@ -36,6 +36,4 @@ Route::get('/showEtudiantDetails/{id}', [AdminController::class, 'showDetails'])
 Route::get('/write-mail/{id}', [MailController::class, 'writeMail']);
 Route::get('/send-mail', [MailController::class, 'sendMail']);
 
-Route::get('/', function () {
-    return view('admin.adminhome');
-});
+Route::get('/', [AdminController::class, 'dashboard']);
