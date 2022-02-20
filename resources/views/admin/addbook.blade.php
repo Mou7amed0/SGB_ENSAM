@@ -49,6 +49,15 @@
                           </select>
                       </div>
 
+                      <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control"  name="description" id="description" placeholder="desc...">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="image">Image du livre</label>
+                        <input type="file" class="form-control"  name="image" id="image" placeholder="image...">
+                      </div>
 
                       <button type="submit" class="btn btn-primary me-2">Add</button>
 

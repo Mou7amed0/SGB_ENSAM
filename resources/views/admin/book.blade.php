@@ -30,7 +30,7 @@
                 <td>{{$data->edition}}</td>
                 <td>{{$data->date_edition}}</td>
                 <td>{{$data->ISBN}}</td>
-                <td>{{$data}}</td>
+                <td>{{$data->id_categorie}}</td>
 
                 <td><a href="{{url('/deletebook',$data->id)}}">Delete</a></td>
 

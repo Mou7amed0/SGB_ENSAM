@@ -10,21 +10,30 @@
         <table  class="table table-striped table-dark">
             <tr>
                 <th style="padding:30px">Id</th>
-                <th style="padding:30px">mail</th>
-                <th style="padding:30px">password</th>
-                <th style="padding:30px">role</th>
-                <th style="padding:30px">Action</th>
+                <th style="padding:30px">Apogée</th>
+                <th style="padding:30px">Nom</th>
+                <th style="padding:30px">Prénom</th>
+                <th style="padding:30px">Date de naissance</th>
+                <th style="padding:30px">Email personnel</th>
+                <th style="padding:30px">Sexe</th>
+                <th style="padding:30px">Actions</th>
 
             </tr>
             @foreach($data as $data)
             <tr align="center">
                 <td>{{$data->id}}</td>
-                <td>{{$data->mail}}</td>
-                <td>{{$data->password}}</td>
-                <td>{{$data->role}}</td>
+                <td>{{$data->apogee}}</td>
+                <td>{{$data->nom}}</td>
+                <td>{{$data->prenom}}</td>
+                <td>{{$data->date_de_naissance}}</td>
+                <td>{{$data->email_personnel}}</td>
+                <td>{{$data->sexe}}</td>
 
-
-                <td><a href="{{url('/deleteuser',$data->id)}}">Delete</a></td>
+                <td>
+                    <a href="{{ url('/showEtudiantDetails', $data->id) }}">Show details</a>
+                    <a href="{{ url('/send-mail', $data->email_personnel) }}">Send email</a>
+                    <a href="{{url('/deleteuser',$data->id)}}">Delete</a>
+                </td>
 
             </tr>
             @endforeach

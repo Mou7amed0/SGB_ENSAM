@@ -30,6 +30,9 @@ Route::get('/deletesuggestion/{id}',[AdminController::class,"deletesuggestion"])
 Route::get('/addbook',[AdminController::class,"addbook"]);
 Route::get('/addcopy',[AdminController::class,"addcopy"]);
 
+
+Route::get('/showEtudiantDetails/{id}', [AdminController::class, 'showDetails']);
+
 Route::get('/write-mail', [MailController::class, 'writeMail']);
 Route::get('/send-mail', [MailController::class, 'sendMail']);
 

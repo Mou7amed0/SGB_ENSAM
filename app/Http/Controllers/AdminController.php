@@ -29,7 +29,8 @@ class AdminController extends Controller
         $data->date_edition=$request->dateEdition;
         $data->ISBN=$request->ISBN;
         $data->id_categorie=$request->category;
-
+        $data->description=$request->description;
+        $data->book_image=$request->image;
         $data->save();
         return redirect()->back();
     }
@@ -60,6 +61,13 @@ class AdminController extends Controller
         $data=Book::all();
         return view("admin.addcopy",compact("data"));
     }
+
+    public function showDetails($id){
+        $data=Etudiant::find($id);
+
+        return view("admin.userDetails", compact('data'));
+    }
+
     public function deleteuser($id){
         $data=Etudiant::find($id);
         $data->delete();
