@@ -30,9 +30,9 @@
                 <td>{{$data->sexe}}</td>
 
                 <td>
-                    <a href="{{ url('/showEtudiantDetails', $data->id) }}">Show details</a>
-                    <a href="{{ url('/write-mail', $data->id) }}">Send email</a>
-                    <a href="{{url('/deleteuser',$data->id)}}">Delete</a>
+                    <a class="btn btn-success" href="{{ url('/showEtudiantDetails', $data->id) }}">Show details</a>
+                    <a class="btn btn-primary" href="{{ url('/write-mail', $data->id) }}">Send email</a>
+                    <a class="btn btn-danger" href="{{url('/deleteuser',$data->id)}}">Delete</a>
                 </td>
 
             </tr>

@@ -38,8 +38,7 @@ class AdminController extends Controller
        $data=new copy;
 
         $data->id=$request->id;
-        $data->state=0;
-
+        
         $data->book_id=$request->book;
 
         $data->save();

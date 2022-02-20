@@ -20,13 +20,14 @@
                         <input type="text" class="form-control" name="id" id="exampleInputUsername1" placeholder="Id">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Description</label>
-                        <input type="text" class="form-control"  name="description" id="exampleInputEmail1" placeholder="Description">
-                      </div>
-                      <div class="form-group">
                         <label for="exampleInputEmail1">Label</label>
                         <input type="text" class="form-control"  name="label" id="exampleInputEmail1" placeholder="label">
                       </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Description</label>
+                        <input type="text" class="form-control"  name="description" id="exampleInputEmail1" placeholder="Description">
+                      </div>
+
 
                       <button type="submit" class="btn btn-primary me-2">Add</button>
 

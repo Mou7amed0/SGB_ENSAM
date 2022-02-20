@@ -44,7 +44,7 @@
 
                           <select class="form-control" name="category" id="category">
                           @foreach($data as $data)
-                          <option value="{{$data->id}}">{{$data->description}}</option>
+                          <option value="{{$data->id}}">{{$data->label}}</option>
                           @endforeach
                           </select>
                       </div>

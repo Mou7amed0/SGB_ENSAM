@@ -19,7 +19,6 @@
                         <label for="id">Id</label>
                         <input type="text" class="form-control" name="id" id="id" placeholder="Id">
                       </div>
-
                       <div class="form-group">
                           <label for="book">Book</label>
 

@@ -36,7 +36,7 @@
      <!-- partial:partials/_sidebar.html -->
      <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          
+
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -149,15 +149,6 @@
               <span class="menu-title">Categories</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="{{url('/write-mail')}}">
-              <span class="menu-icon">
-                <i class="mdi"></i>
-              </span>
-              <span class="menu-title">Notify via mail</span>
-            </a>
-          </li>
-
 
       </nav>
  <!-- partial -->
