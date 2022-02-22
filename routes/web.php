@@ -35,7 +35,6 @@ Route::get('/terminateresa/{id}', [AdminController::class, "terminateresa"]);
 Route::get('/addbook',[AdminController::class,"addbook"]);
 Route::get('/addcopy',[AdminController::class,"addcopy"]);
 
-
 Route::get('/showEtudiantDetails/{id}', [AdminController::class, 'showDetails']);
 
 Route::get('/write-mail/{id}', [MailController::class, 'writeMail']);

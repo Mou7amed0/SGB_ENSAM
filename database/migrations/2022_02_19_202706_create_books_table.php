@@ -25,13 +25,11 @@ return new class extends Migration
             $table->timestamps();
 
             // foreign key
-            $table->timestamps();
-            $table->integer('id_categorie')->unsigned();
+            $table->unsignedBigInteger('id_categorie');
+            $table->foreign('id_categorie')->references('id')->on("categories");
 
         });
-        Schema::table('books', function (Blueprint $table) {
-            $table->foreign('id_categorie')->references('id')->on("categories")->onDelete('cascade');
-        });
+
     }
 
     /**

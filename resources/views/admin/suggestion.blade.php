@@ -15,7 +15,7 @@
                 <th style="padding:30px">Actions</th>
             </tr>
             @foreach($data as $data)
-            <tr align="center">
+            <tr>
                 <td>{{$data->id}}</td>
                 <td>{{$data->content}}</td>
                 <td>{{$data->user->name}} {{$data->user->surname}}</td>

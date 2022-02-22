@@ -33,8 +33,15 @@ class AdminController extends Controller
         $data->ISBN=$request->ISBN;
         $data->id_categorie=$request->category;
         $data->description=$request->description;
-        $data->book_image=$request->image;
+
+        $data->book_image=file_get_contents($request->image);
+
         $data->save();
+        for($i =0; $i < $request->copies; $i++){
+            $copy = new copy;
+            $copy->book_id = $data->id;
+            $copy->save();
+        }
         return redirect()->back();
     }
     public function uploadcopy(Request $request){
@@ -119,7 +126,7 @@ class AdminController extends Controller
     }
 
     public function suggestion(){
-        $data=Suggestion::all()->load('etudiant');
+        $data=Suggestion::all()->load('user');
         return view("admin.suggestion",compact("data"));
     }
     public function  copy(){

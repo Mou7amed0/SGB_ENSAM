@@ -31,3 +31,17 @@
            margin-right: auto;
         }
     </style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(" input ").css("color", "white")
+$(" select ").css("color", "white")
+$('select').change(function () {
+    $(this).find('option').css('color', 'white');
+    $(this).find('option:selected').css('background-color', 'red');
+}).trigger('change');
+});
+</script>
+
+

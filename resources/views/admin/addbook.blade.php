@@ -13,9 +13,9 @@
                     <h4 class="card-title">Add Book form</h4>
 
 
-                    <form class="forms-sample" method="post" action="{{url('./uploadbook')}}">
+                    <form class="forms-sample" method="post" action="{{url('./uploadbook')}}" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                    
+
                       <div class="form-group">
                         <label for="title">title</label>
                         <input type="text" class="form-control"  name="title" id="title" placeholder="Title">
@@ -54,6 +54,11 @@
                       <div class="form-group">
                         <label for="image">Image du livre</label>
                         <input type="file" class="form-control"  name="image" id="image" placeholder="image...">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="copies">Nombre de copies</label>
+                        <input type="number" min="1" value="1" class="form-control"  name="copies" id="copies">
                       </div>
 
                       <button type="submit" class="btn btn-primary me-2">Add</button>
